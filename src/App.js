@@ -1,21 +1,26 @@
-
-import { Menu } from '@szhsin/react-menu';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Example from './components/menu.js';
 import Testimonials from './components/testimones.js';
 import StepsCard from './components/steps.js';
+import CardGrid from './components/test.js';
 import Hero from './components/hero.js';
-import './App.css';
-import './components/menu.js' // Import the menu component;
 import NavBar from './components/navBar.js';
+import './App.css';
+
 function App() {
   return (
-    <div className="App">
-  <NavBar></NavBar>
-  <Hero></Hero>
-<StepsCard></StepsCard>
-<Testimonials></Testimonials>
-<Example></Example>
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/libary" element={<CardGrid />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/example" element={<Example />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
