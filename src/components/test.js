@@ -9,7 +9,7 @@ const CardGrid = () => {
     if (inputValue.trim()) {
       setCards([...cards, inputValue.trim()]);
       setInputValue('');
-      setSidebarVisible(false); // Hide sidebar after adding the card
+      setSidebarVisible(false); 
     }
   };
 
@@ -53,7 +53,7 @@ const CardGrid = () => {
           placeholder="Enter manga URL"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4"
+          className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-4 text-black"
         />
         <button
           onClick={addCard}

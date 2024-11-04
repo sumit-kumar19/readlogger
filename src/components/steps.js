@@ -1,5 +1,4 @@
 import React from 'react';
-// Assuming you have some CSS for styling
 
 const StepsCard = () => {
     return (
