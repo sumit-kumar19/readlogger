@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Example from './components/menu.js';
+
 import Testimonials from './components/testimones.js';
 import StepsCard from './components/steps.js';
 import CardGrid from './components/test.js';
@@ -15,10 +15,11 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/libary" element={<CardGrid />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/example" element={<Example />} />
+          <Route path="/test" element={<CardGrid />} />
+          {/* <Route path="/testimonials" element={<Testimonials />} /> */}
         </Routes>
+        <StepsCard />
+        <Testimonials />
       </div>
     </Router>
   );
