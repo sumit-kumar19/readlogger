@@ -14,7 +14,7 @@ const CardGrid = () => {
   };
 
   return (
-    <div className="bg-gray-900 min-h-screen flex flex-col justify-between relative">
+    <div className="bg-gray-200 min-h-screen flex flex-col justify-between relative">
       
 
       <div className="p-8 mb-40">

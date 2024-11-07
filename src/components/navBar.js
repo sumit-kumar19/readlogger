@@ -11,19 +11,17 @@ const NavBar = () => {
         <div className="navBar relative">
             <header className="text-gray-300 body-font bg-slate-900">
                 <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-                    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-10 h-10 text-white p-2 bg-purple-500 rounded-full" viewBox="0 0 24 24">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-                        </svg>
+                    <a  href ="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/2312101943904128274/142C7109DE75F729CF0A2A2167EDB400968B9AAC/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" alt="logo" className="w-11 h-11 rounded-full" />
                         <span className="ml-3 text-xl text-gray-300">ReadLogger</span>
                     </a>
 
                     {/* Navigation links */}
                     <nav className={`md:ml-auto flex flex-wrap items-center text-base justify-center ${isOpen ? 'block' : 'hidden'} md:flex`}>
-                        <a href='/' className="mr-5 hover:text-gray-900">Home</a>
-                        <a href='/' className="mr-5 hover:text-gray-900">About us</a>
-                        <a href='/test' className="mr-5 hover:text-gray-900">Library</a>
-                        <a className="mr-5 hover:text-gray-900">Contact</a>
+                        <a href='/' className="mr-5 hover:text-gray-400">Home</a>
+                        <a href='/' className="mr-5 hover:text-gray-400">About us</a>
+                        <a href='/libaray' className="mr-5 hover:text-gray-400">Library</a>
+                        <a className="mr-5 hover:text-gray-400">Contact</a>
                     </nav>
 
                     {/* Login/Sign-in button */}

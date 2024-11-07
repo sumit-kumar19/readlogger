@@ -1,12 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import Testimonials from './components/testimones.js';
-import StepsCard from './components/steps.js';
-import CardGrid from './components/test.js';
+import CardGrid from './components/cardgrid.js';
 import Hero from './components/hero.js';
 import NavBar from './components/navBar.js';
 import './App.css';
+import Home from './components/home/home.js';
 
 function App() {
   return (
@@ -14,12 +12,9 @@ function App() {
       <div className="App">
         <NavBar />
         <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/test" element={<CardGrid />} />
-          {/* <Route path="/testimonials" element={<Testimonials />} /> */}
+          <Route path="/libaray" element={<CardGrid />} />
+          <Route path="/" element={<Home />} />
         </Routes>
-        <StepsCard />
-        <Testimonials />
       </div>
     </Router>
   );
