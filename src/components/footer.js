@@ -61,26 +61,7 @@ const Footer = () => {
               site to make your reading experience better and more interactive.
             </p>
           </div>
-          <div>
-            <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-              Bloge
-            </h6>
-            <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                About
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                Progress
-              </a>
-            </p>
-            <p className="mb-4">
-              <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                Contact
-              </a>
-            </p>
-          </div>
+        
           
           <div>
             <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
