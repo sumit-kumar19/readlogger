@@ -182,7 +182,7 @@ export default function AboutUs() {
   ]
 
   return (
-    <div className="relative min-h-screen bg-gray-100">
+    <div className="relative min-h-screen ">
       <motion.div
         className="fixed top-0 left-0 right-0 h-2 bg-blue-500 origin-left z-50"
         style={{ scaleX }}

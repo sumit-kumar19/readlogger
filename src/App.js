@@ -1,10 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CardGrid from './components/cardgrid.js';
-
 import NavBar from './components/navBar.js';
 import './App.css';
+import particle from './particle.js';
 import Home from './components/home/home.js';
+
+
+// seema rekha
+import Particles from "react-particles";
+import { loadSlim } from "@tsparticles/slim";
+
 
 function App() {
   return (
