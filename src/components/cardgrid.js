@@ -14,7 +14,7 @@ const CardGrid = () => {
   };
 
   return (
-    <div className="bg-gray-200 min-h-screen flex flex-col justify-between relative">
+    <div className="bg-gray-200 min-h-screen flex flex-col justify-between relative ">
       <div className="p-8 mb-40">
         {/* Button to show the sidebar */}
         <div className="mb-6 flex justify-center">
@@ -45,7 +45,7 @@ const CardGrid = () => {
 
       {/* Sidebar for input, sliding from the left */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-gray-800 text-white p-6 transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 h-full w-64 mt-9 bg-gray-800 text-white p-6 transform transition-transform duration-300 ${
           sidebarVisible ? "translate-x-0" : "-translate-x-full"
         }`}
       >

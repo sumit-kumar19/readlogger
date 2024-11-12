@@ -45,7 +45,6 @@
 // };
 
 // export default NavBar;
-
 'use client'
 
 import React, { useState, useEffect } from 'react'
@@ -90,7 +89,7 @@ export default function Component() {
             <a
               href="/"
               className={`text-sm font-medium uppercase tracking-wider transition-colors ${
-                activePage === 'home' ? 'text-purple-600' : 'text-gray-900 hover:text-purple-600'
+                activePage === 'home' ? 'text-purple-400' : 'text-gray-900 hover:text-purple-400'
               } dark:text-gray-100 dark:hover:text-blue-300`}
               onClick={() => setActivePage('home')}
             >
@@ -99,7 +98,7 @@ export default function Component() {
             <a
               href="/about"
               className={`text-sm font-medium uppercase tracking-wider transition-colors ${
-                activePage === 'about' ? 'text-amber-400' : 'text-gray-900 hover:text-amber-400'
+                activePage === 'about' ? 'text-purple-400' : 'text-gray-900 hover:text-purple-400'
               } dark:text-gray-100 dark:hover:text-blue-300`}
               onClick={() => setActivePage('about')}
             >
@@ -108,11 +107,20 @@ export default function Component() {
             <a
               href="/contact"
               className={`text-sm font-medium uppercase tracking-wider transition-colors ${
-                activePage === 'contact' ? 'text-amber-400' : 'text-gray-900 hover:text-amber-400'
+                activePage === 'contact' ? 'text-purple-400' : 'text-gray-900 hover:text-purple-400'
               } dark:text-gray-100 dark:hover:text-blue-300`}
               onClick={() => setActivePage('contact')}
             >
               Contact
+            </a>
+            <a
+              href="/libaray"
+              className={`text-sm font-medium uppercase tracking-wider transition-colors ${
+                activePage === 'contact' ? 'text-purple-400' : 'text-gray-900 hover:text-purple-400'
+              } dark:text-gray-100 dark:hover:text-blue-300`}
+              onClick={() => setActivePage('libaray')}
+            >
+              Library
             </a>
           </nav>
 
@@ -127,7 +135,7 @@ export default function Component() {
             </button>
 
             {/* Login/Sign-in button for desktop */}
-            <button className="rounded bg-amber-400 px-3 py-1 text-base text-white hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-white dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800">
+            <button className="rounded bg-purple-400 px-3 py-1 text-base text-white hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-white dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800">
               Login/Sign-in
             </button>
           </div>
@@ -178,7 +186,7 @@ export default function Component() {
           <nav className="flex flex-col space-y-2">
             <a
               className={`block py-2 text-sm font-medium uppercase tracking-wider ${
-                activePage === 'home' ? 'text-amber-400' : 'text-gray-900 hover:text-amber-400'
+                activePage === 'home' ? 'text-purple-400' : 'text-gray-900 hover:text-purple-400'
               } dark:text-gray-100 dark:hover:text-blue-300`}
               href="/"
               onClick={() => {
@@ -190,9 +198,9 @@ export default function Component() {
             </a>
             <a
               className={`block py-2 text-sm font-medium uppercase tracking-wider ${
-                activePage === 'about' ? 'text-amber-400' : 'text-gray-900 hover:text-amber-400'
+                activePage === 'about' ? 'text-purple-400' : 'text-gray-900 hover:text-purple-400'
               } dark:text-gray-100 dark:hover:text-blue-300`}
-              href="/about"
+              href="/"
               onClick={() => {
                 setActivePage('about')
                 toggleMenu()
@@ -202,9 +210,9 @@ export default function Component() {
             </a>
             <a
               className={`block py-2 text-sm font-medium uppercase tracking-wider ${
-                activePage === 'contact' ? 'text-amber-400' : 'text-gray-900 hover:text-amber-400'
+                activePage === 'contact' ? 'text-purple-400' : 'text-gray-900 hover:text-purple-400'
               } dark:text-gray-100 dark:hover:text-blue-300`}
-              href="/contact"
+              href="/"
               onClick={() => {
                 setActivePage('contact')
                 toggleMenu()
@@ -212,15 +220,28 @@ export default function Component() {
             >
               Contact
             </a>
+            <a
+              className={`block py-2 text-sm font-medium uppercase tracking-wider ${
+                activePage === 'contact' ? 'text-purple-400' : 'text-gray-900 hover:text-purple-400'
+              } dark:text-gray-100 dark:hover:text-blue-300`}
+              href="/libaray"
+              onClick={() => {
+                setActivePage('contact')
+                toggleMenu()
+              }}
+            >
+              Library
+            </a>
             <button
               onClick={toggleTheme}
-              className="flex items-center space-x-2 py-2 text-sm font-medium uppercase tracking-wider text-gray-900 hover:text-amber-400 dark:text-gray-100 dark:hover:text-blue-300"
+              className="flex items-center py-2 text-sm font-medium uppercase tracking-wider text-gray-900 hover:text-purple-400 dark:text-gray-100 dark:hover:text-blue-300"
               aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
             >
+              
               {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              <span>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</span>
+              Theme
             </button>
-            <button className="mt-2 w-full rounded bg-amber-400 px-3 py-2 text-sm font-medium uppercase tracking-wider text-white hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-300 focus:ring-offset-2 focus:ring-offset-white dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800">
+            <button className="mt-2 w-full rounded bg-purple-400 px-3 py-2 text-sm font-medium uppercase tracking-wider text-white hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-white dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800">
               Login/Sign-in
             </button>
           </nav>
