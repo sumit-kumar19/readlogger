@@ -123,6 +123,7 @@ export default function Component() {
               Library
             </a>
           </nav>
+          
 
           <div className="hidden items-center space-x-4 md:flex">
             {/* Theme toggle button for desktop */}
@@ -139,6 +140,7 @@ export default function Component() {
               Login/Sign-in
             </button>
           </div>
+          
 
           {/* Hamburger menu button for mobile view */}
           <button
@@ -245,6 +247,7 @@ export default function Component() {
               Login/Sign-in
             </button>
           </nav>
+
         </div>
       )}
     </div>
