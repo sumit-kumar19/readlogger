@@ -93,7 +93,7 @@ export default function Hero() {
               </a>
               <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
                 <span>Random Text:</span>
-                <RandomTextComponent />
+                
 
                 </div>
             </div>

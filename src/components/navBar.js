@@ -73,7 +73,7 @@ export default function Component() {
 
   return (
     <div className="relative">
-      <header className="relative z-50 w-full bg-white dark:bg-gray-800">
+      <header className="relative z-50 w-full bg-gray-300 dark:bg-gray-800">
         <div className="container mx-auto flex items-center justify-between px-4 py-6">
           <a href="/" className="flex items-center font-medium text-gray-900 dark:text-gray-100">
             <img
@@ -241,7 +241,6 @@ export default function Component() {
             >
               
               {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-              Theme
             </button>
             <button className="mt-2 w-full rounded bg-purple-400 px-3 py-2 text-sm font-medium uppercase tracking-wider text-white hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-300 focus:ring-offset-2 focus:ring-offset-white dark:bg-gray-700 dark:text-gray-100 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:focus:ring-offset-gray-800">
               Login/Sign-in

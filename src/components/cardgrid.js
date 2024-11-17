@@ -96,14 +96,15 @@ export default function MangaCardGrid() {
   }
 
   return (
-    <div className="bg-gray-200 min-h-screen flex flex-col justify-between relative">
-      <div className="p-8 mb-40">
-        <div className="mb-6 flex justify-center">
+    <div className="bg-gray-100 min-h-screen flex flex-col justify-between relative">
+      <div className="container mx-auto p-8">
+        <div className="mb-6 flex justify-between items-center">
+          <h1 className="text-3xl font-bold">Manga Collection</h1>
           <button
             onClick={() => setSidebarVisible(true)}
             className="px-6 py-2 bg-black text-white rounded-md shadow transition-colors"
           >
-            Add
+            Add Manga
           </button>
         </div>
 
@@ -147,7 +148,9 @@ export default function MangaCardGrid() {
           </svg>
         </button>
 
-        <h2 className="text-xl font-semibold mb-4">Enter Manga URL</h2>
+        <h2 className="text-xl font-semibold mb-4">
+          Add New Manga
+        </h2>
         <input
           type="url"
           placeholder="https://example.com/manga-cover.jpg"
