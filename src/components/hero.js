@@ -65,7 +65,7 @@
 
 // export default Hero;
 import React from 'react'
-
+import RandomTextComponent from './test'
 
 export default function Hero() {
   return (
@@ -91,6 +91,11 @@ export default function Hero() {
                   View Progress
                 </button>
               </a>
+              <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
+                <span>Random Text:</span>
+                <RandomTextComponent />
+
+                </div>
             </div>
           </div>
 
