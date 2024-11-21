@@ -65,7 +65,7 @@
 
 // export default Hero;
 import React from 'react'
-import RandomTextComponent from './test'
+import { HyperText } from './test.tsx'
 
 export default function Hero() {
   return (
@@ -75,13 +75,15 @@ export default function Hero() {
           {/* Text Content */}
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              READLOGGER
+              <HyperText text="READLOGGER" duration={1000} glitchSpeed={50} className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6" />
+
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl">
               Your personal site for reading novels, keeping track of the books you've read, and managing your reading wishlist.
+            
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-              <a href="/library" passHref>
+              <a href="/libaray" passHref>
                 <button className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors duration-200">
                   Visit Library
                 </button>
@@ -91,11 +93,7 @@ export default function Hero() {
                   View Progress
                 </button>
               </a>
-              <div className="flex items-center justify-center gap-2 text-gray-500 text-sm">
-                <span>Random Text:</span>
-                
-
-                </div>
+            
             </div>
           </div>
 

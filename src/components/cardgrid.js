@@ -78,23 +78,44 @@
 
 // export default CardGrid;
 
-'use client'
+"use client";
 
-import { useState } from "react"
+import { useState } from "react";
 
 export default function MangaCardGrid() {
-  const [cards, setCards] = useState([])  // No type annotations needed in JS
-  const [inputValue, setInputValue] = useState("")
-  const [sidebarVisible, setSidebarVisible] = useState(false)
+  const [cards, setCards] = useState([]); // No type annotations needed in JS
+  const [inputValue, setInputValue] = useState("");
+  const [name, setName] = useState("");
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
   const addCard = () => {
     if (inputValue.trim()) {
-      setCards([...cards, inputValue.trim()])
-      setInputValue("")
-      setSidebarVisible(false)
+      setCards([...cards, inputValue.trim()]);
+      setInputValue("");
+      setSidebarVisible(false);
     }
-  }
-
+  };
+  const fetchUrl = async (url) => {
+    console.log("fetching URL", url);
+    const data = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ url }),
+    };
+    await fetch("http://localhost:5000/manga", data)
+      .then(async (response) => {
+        if (response.ok) {
+          var jdata = await response.json();
+          setName(jdata.name);
+          return jdata;
+        } else {
+          alert("Failed to add manga");
+        }
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div className="bg-gray-100 min-h-screen flex flex-col justify-between relative">
       <div className="container mx-auto p-8">
@@ -125,7 +146,7 @@ export default function MangaCardGrid() {
       </div>
 
       {sidebarVisible && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm"
           aria-hidden="true"
           onClick={() => setSidebarVisible(false)}
@@ -143,14 +164,23 @@ export default function MangaCardGrid() {
           onClick={() => setSidebarVisible(false)}
           aria-label="Close sidebar"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
-        <h2 className="text-xl font-semibold mb-4">
-          Add New Manga
-        </h2>
+        <h2 className="text-xl font-semibold mb-4">Add New Manga : </h2>
         <input
           type="url"
           placeholder="https://example.com/manga-cover.jpg"
@@ -160,12 +190,12 @@ export default function MangaCardGrid() {
           aria-label="Manga cover URL input"
         />
         <button
-          onClick={addCard}
+          onClick={() => { fetchUrl(inputValue); addCard(); }}
           className="w-full px-6 py-2 bg-black text-white rounded-md shadow hover:bg-gray-800 transition-colors"
         >
           Add to Collection
         </button>
       </div>
     </div>
-  )
+  );
 }
